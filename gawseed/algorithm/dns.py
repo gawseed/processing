@@ -1,19 +1,19 @@
-PublicSuffixList = None
+DNSSplitter = None
 
 # The publicSuffixList module is used a lot in the following code
 # The search_tree function returns a 3-variable array
 # [prefix, suffix, public_point]
 
 try:
-    from publicSuffixList import PublicSuffixList
+    from dnssplitter import DNSSplitter
     from gawseed.algorithm.relationship import lookup, lookup_maybe_ra
 except:
     import zipimport
     z = zipimport.zipimporter("gawseed-modules.mod")
-    psl_mod = z.load_module("publicSuffixList")
-    PublicSuffixList = psl_mod.PublicSuffixList
+    psl_mod = z.load_module("DNSSplitter")
+    DNSSplitter = psl_mod.DNSSplitter
 
-psl = PublicSuffixList()
+psl = DNSSplitter()
 
 #
 # public suffix list based featureCounter routines
