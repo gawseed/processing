@@ -15,7 +15,9 @@ setuptools.setup(
     packages=setuptools.find_packages(),
     entry_points={
         'console_scripts': [
-            # 'dbtopn = pyfsdb.topn:main',
+            'featureCounter.py = gawseed.scripts.featureCounter:main',
+            'aggregator.py = gawseed.scripts.aggregator:main',
+            'relationshipAnalysis.py = gawseed.scripts.relationshipAnalysis:main',
         ]
     },
     classifiers=[
