@@ -2,14 +2,14 @@ import unittest
 
 class averageWindowTests(unittest.TestCase):
     def test_loading(self):
-        from averageWindow import AverageWindow
+        from gawseed.averageWindow import AverageWindow
         self.assertTrue(True, "loaded ok")
 
         aw = AverageWindow()
         self.assertTrue(aw is not None, "created ok")
 
     def test_w1m0(self):
-        from averageWindow import AverageWindow
+        from gawseed.averageWindow import AverageWindow
         aw = AverageWindow(window_size=1, middle_size=0)
 
         aw.add_element(0)
@@ -25,7 +25,7 @@ class averageWindowTests(unittest.TestCase):
         self.assertTrue(aw.get_delta() == -5, "delta is -5")
         
     def test_w1m1(self):
-        from averageWindow import AverageWindow
+        from gawseed.averageWindow import AverageWindow
         aw = AverageWindow(window_size=1, middle_size=1)
 
         aw.add_element(0)
@@ -42,7 +42,7 @@ class averageWindowTests(unittest.TestCase):
         self.assertEqual(aw.get_delta(), 20, "delta is 20")
         
     def test_w2m1(self):
-        from averageWindow import AverageWindow
+        from gawseed.averageWindow import AverageWindow
         aw = AverageWindow(window_size=2, middle_size=1)
 
         aw.add_element(-1)

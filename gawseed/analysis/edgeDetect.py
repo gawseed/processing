@@ -1,5 +1,5 @@
 import gawseed.analysis
-import averageWindow
+import gawseed.averageWindow
 import collections
 
 class EdgeDetect(gawseed.analysis.Analysis):
