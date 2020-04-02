@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="gawseed-processing",
-    version="0.9.0",
+    version="0.9.1",
     author="Wes Hardaker and USC/ISI",
     author_email="opensource@hardakers.net",
     description="A data processing engine for statistically analyzing time series data",
